@@ -22,6 +22,7 @@ Usage:
     python manage.py clean             # Clean up generated files
     python manage.py info              # Display project info
     python manage.py docs              # Generate OpenAPI docs
+    pytest -v --maxfail=1 --tb=short   # Test one by one tests and stop on 1st fail
 """
 
 import asyncio

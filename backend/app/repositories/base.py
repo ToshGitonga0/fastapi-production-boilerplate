@@ -193,9 +193,11 @@ class BaseRepo(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
             >>> updated_user = await repo.update(db_obj=user, obj_in=update_data)
         """
         if hasattr(db_obj, "deleted_at") and db_obj.deleted_at is not None:
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Record not found or has been deleted")
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND, detail="Record not found or has been deleted"
+            )
         # Get update data
-        if isinstance(obj_in, dict):
+        if isinstance(obj_in, dict):  # noqa: SIM108
             update_data = obj_in
         else:
             update_data = obj_in.model_dump(exclude_unset=True)
@@ -262,7 +264,9 @@ class BaseRepo(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
             )
         db_obj = await self.get(id)
         if not db_obj:
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{self.model.__name__} not found")
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND, detail=f"{self.model.__name__} not found"
+            )
 
         db_obj.deleted_at = datetime.utcnow()
         self.session.add(db_obj)
