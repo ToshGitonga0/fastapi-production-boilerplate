@@ -60,11 +60,7 @@ app = typer.Typer(
 )
 
 
-# =============================================================================
 # HELPER FUNCTIONS
-# =============================================================================
-
-
 def check_production():
     """Prevent destructive operations in production"""
     if ENV == "production":
@@ -79,11 +75,7 @@ def run_command(
     return subprocess.run(cmd, check=check, cwd=cwd)
 
 
-# =============================================================================
 # TESTING COMMANDS
-# =============================================================================
-
-
 @app.command(name="test")
 def run_tests(
     coverage: bool = typer.Option(True, help="Generate coverage report"),
@@ -156,11 +148,7 @@ def run_tests_watch():
         console.print("\n[yellow]Stopped watching for changes.[/yellow]")
 
 
-# =============================================================================
 # DATABASE COMMANDS
-# =============================================================================
-
-
 def db_execute_sql(sql: str, autocommit: bool = True) -> bool:
     """Execute raw SQL command via psql"""
     import psycopg2
@@ -358,11 +346,7 @@ def reset_database(confirm: bool = typer.Option(False, "--yes", "-y", help="Skip
         sys.exit(1)
 
 
-# =============================================================================
 # CODE QUALITY COMMANDS
-# =============================================================================
-
-
 @app.command(name="lint")
 def run_linter(fix: bool = typer.Option(False, "--fix", help="Auto-fix issues")):
     log_section("🔍 RUNNING LINTERS", "bold blue")
@@ -395,11 +379,7 @@ def format_code(check: bool = typer.Option(False, "--check", help="Check without
         console.print("[yellow]⚠️  Formatting issues found.[/yellow]")
 
 
-# =============================================================================
 # DEVELOPMENT COMMANDS
-# =============================================================================
-
-
 @app.command(name="dev")
 def run_dev_server(
     host: str = typer.Option("0.0.0.0", help="Host to bind to"),
@@ -450,11 +430,7 @@ def run_prod_server(
         console.print("\n[yellow]Server stopped.[/yellow]")
 
 
-# =============================================================================
 # UTILITY COMMANDS
-# =============================================================================
-
-
 @app.command(name="shell")
 def start_shell():
     log_section("🐚 INTERACTIVE SHELL", "bold cyan")

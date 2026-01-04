@@ -23,32 +23,32 @@
 ## ✨ Features
 
 ### 🏗️ **Architecture & Design**
-- ✅ **Clean Architecture** - Repository → Service → Controller pattern
-- ✅ **SOLID Principles** - Single Responsibility, Dependency Inversion, etc.
-- ✅ **Dependency Injection** - Proper DI with FastAPI dependencies
-- ✅ **Type Safety** - Full type hints with Pydantic v2
+- **Clean Architecture** - Repository → Service → Controller pattern
+- **SOLID Principles** - Single Responsibility, Dependency Inversion, etc.
+- **Dependency Injection** - Proper DI with FastAPI dependencies
+- **Type Safety** - Full type hints with Pydantic v2
 
 ### 🛠️ **Tech Stack**
-- ⚡ **FastAPI** - Modern, fast web framework
-- 🗄️ **SQLModel** - SQL databases with Python objects (SQLAlchemy 2.0)
-- 🔄 **Alembic** - Database migrations
-- 🔐 **JWT Authentication** - Secure token-based auth
-- 📦 **uv** - Ultra-fast Python package manager
-- 🧪 **Pytest** - Comprehensive testing suite
+- **FastAPI** - Modern, fast web framework
+- **SQLModel** - SQL databases with Python objects (SQLAlchemy 2.0)
+- **Alembic** - Database migrations
+- **JWT Authentication** - Secure token-based auth
+- **uv** - Ultra-fast Python package manager
+- **Pytest** - Comprehensive testing suite
 
 ### 🚀 **Developer Experience**
-- 📝 **Beautiful CLI** - Rich console interface with `manage.py`
-- 🔍 **Auto-generated Docs** - Interactive API documentation
-- 🎨 **Code Quality** - Ruff for linting & formatting
-- 🔄 **Hot Reload** - Instant development feedback
-- 📊 **Database Seeding** - Pre-populated test data
+- **Beautiful CLI** - Rich console interface with `manage.py`
+- **Auto-generated Docs** - Interactive API documentation
+- **Code Quality** - Ruff for linting & formatting
+- **Hot Reload** - Instant development feedback
+- **Database Seeding** - Pre-populated test data
 
 ### 🔒 **Production Ready**
-- 🛡️ **Security Best Practices** - Password hashing, CORS, rate limiting ready
-- 📈 **Scalable Design** - Async/await, connection pooling
-- 🐛 **Error Handling** - Comprehensive exception handling
-- 📝 **Logging** - Structured logging with loguru
-- 🔍 **Monitoring Ready** - Sentry integration support
+- **Security Best Practices** - Password hashing, CORS, rate limiting ready
+- **Scalable Design** - Async/await, connection pooling
+- **Error Handling** - Comprehensive exception handling
+- **Logging** - Structured logging with loguru
+- **Monitoring Ready** - Sentry integration support
 
 ---
 
@@ -98,7 +98,7 @@ fastapi-producion-boilerplate/
 
 - **Python 3.11+**
 - **PostgreSQL 14+**
-- **uv** (Python package manager)
+- **uv**
 
 ### Installation
 
@@ -300,7 +300,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **Sebastián Ramírez** - Creator of FastAPI, whose work inspired this boilerplate
+- **Sebastián Ramírez** - Creator of FastAPI
 - The FastAPI community for excellent documentation and support
 - All contributors who help improve this project
 
